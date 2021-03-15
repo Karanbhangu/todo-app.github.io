@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO App || Karan Bhangu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top" id="top">
+      <div class="nav">
+        <h1>T O D O</h1>
+        <img src="images/icon-moon.svg" alt="" onclick="darkMode()" id="modeimage">
+      </div>
+      <div class="inputbar" id="inputbar">
+        <input type="radio" name="" id="mainButton" onclick="addNote()"><input type="text" placeholder="Create a new todo." id="note">
+      </div>
+    </div>
+    <div class="bottom" id="bottom">
+      <div class="taskbar" id="taskbar">
+        <div class="tasks" id="tasks">
+        </div>
+        <div class="filter">
+          <div><p id="itemsleft">0 items left</p></div>
+          <div id="filtering">
+            <a href="#" onclick="colorChange(this, this.nextSibling, this.nextSibling.nextSibling), showNote()" class="bluecolor">All</a><a href="#" onclick="colorChange(this,this.previousSibling,this.nextSibling), noteFilter2()">Active</a><a href="#" onclick="colorChange(this, this.previousSibling,this.previousSibling.previousSibling), noteFilter3()">Completed</a>
+          </div>
+          <div><p onclick="clearCompleted()" style="cursor: pointer;">Clear Completed</p></div>
+        </div>
+      </div>
+    </div>
+    <div id="filtertwo">
+      <div class="forstyles" id="forstyles">      <a href="#!" onclick="colorChange(this, this.nextSibling, this.nextSibling.nextSibling), showNote()" class="bluecolor">All</a><a href="#!" onclick="colorChange(this,this.previousSibling,this.nextSibling), noteFilter2()">Active</a><a href="#!" onclick="colorChange(this, this.previousSibling,this.previousSibling.previousSibling), noteFilter3()">Completed</a></div>
+    </div>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>
+<!-- PROJECT MADE BY KARANBHANGU -->

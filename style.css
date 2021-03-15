@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+    background: url(images/bg-desktop-light.jpg) center no-repeat;
+    flex-direction: column;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    color: #fff;
+}
+.rotateimage{
+    animation: rotateimage 0.5s;
+}
+.loweropacity{
+    animation: loweropacity 0.3s;
+}
+@keyframes loweropacity{
+    from{
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+@keyframes rotateimage{
+    from{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    to{
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+.inputbar{
+    width: 35%;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    margin-top: 15px;
+}
+.inputbar input[type=text]{
+    background: none;
+    border: none;
+    margin-left: 10px;
+    width: 90%;
+}
+.inputbar input[type=text]:focus{
+    outline: none;
+}
+.inputbar input[type=radio]{
+    background: url(images/icon-check.svg);
+    width: 10%;
+}
+.bottom{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.taskbar{
+    width: 35%;
+    height: 90%;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, .09),
+                2px 5px 20px rgba(0, 0, 0, .5),
+                -1px -2px 10px rgba(0, 0, 0, .06);
+}
+.taskbar{
+    display: flex;
+    flex-direction: column;
+}
+.tasks{
+    height: 90%;
+    overflow-y: scroll;
+}
+.task{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+.task input{
+    width: 10%;
+}
+.task p{
+    width: 89%;
+    margin-left: 1%;
+}
+.filter{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: hsl(236, 9%, 61%);
+}
+.filter div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter div:nth-child(2) a{
+    text-decoration: none;
+    color: hsl(235, 19%, 35%);
+    margin: 0px 5px;
+}
+/* Dark Mode Classes */
+.darktop{
+    background: url(images/bg-desktop-dark.jpg) center no-repeat
+}
+.darkinputbar{
+    background: hsl(235, 24%, 19%);
+}
+.darkinputbar input{
+    color: hsl(234, 39%, 85%);
+}
+.darkinputbar input::placeholder{
+    color: hsl(234, 39%, 85%);
+    opacity: .9;
+}
+.darkbottom{
+    background: hsl(235, 21%, 11%);
+}
+.darktaskbar{
+    background: hsl(235, 24%, 19%);
+    color: #fff;
+}
+.darktaskbar .filter div:nth-child(2) a{
+    color: hsl(234, 39%, 85%);
+}
+.topbackground{
+    animation: topbackground 0.3s;
+}
+@keyframes topbackground{
+    from{
+        background: url(images/bg-desktop-light.jpg) center no-repeat;    
+    }
+    to{
+        background: url(images/bg-desktop-dark.jpg) center no-repeat;
+    }
+}
+.bottombackground{
+    animation: bottombackground 0.3s;
+}
+@keyframes bottombackground{
+    from{
+        background: #fff;
+    }
+    to{
+        background: hsl(235, 21%, 11%);
+    }
+}
+.taskandinputbacground{
+    animation: taskandinputbacground 0.3s;
+}
+@keyframes taskandinputbacground{
+    from{background: #fff;}
+    to{    background: hsl(235, 24%, 19%);
+    }
+}
+.darktopbackground{
+    animation: darktopbackground 0.3s;
+}
+@keyframes darktopbackground{
+    from{
+        background: url(images/bg-desktop-dark.jpg) center no-repeat;    
+    }
+    to{
+        background: url(images/bg-desktop-light.jpg) center no-repeat;
+    }
+}
+.darkbottombackground{
+    animation: darkbottombackground 0.3s;
+}
+@keyframes darkbottombackground{
+    from{
+        background: hsl(235, 21%, 11%);
+    }
+    to{
+        background: #fff;
+    }
+}
+.darktaskandinputbacground{
+    animation: darktaskandinputbacground 0.3s;
+}
+@keyframes darktaskandinputbacground{
+    from{background: hsl(235, 24%, 19%);}
+    to{    background: #fff;
+    }
+}
+.noteDone{
+    color: hsl(233, 11%, 84%);
+    position: relative;
+}
+.noteDone::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    background: hsl(233, 11%, 84%);
+}
+.bluecolor{
+    font-weight: bold;
+    color: blue !important;
+}
+.filter{
+    padding: 0px 4px 0px 4px;
+}
+@media (max-width:1176px){
+    .inputbar{
+        width: 45%;
+    }
+    .taskbar{
+        width: 45%;
+    }
+    .nav{
+        width: 45%;
+    }
+}
+#filtertwo{
+    display: none;
+}
+@media (max-width:900px){
+    .inputbar{
+        width: 60%;
+    }
+    .taskbar{
+        width: 60%;
+    }
+    .nav{
+        width: 60%;
+    }
+}
+@media (max-width:600px){
+    #filtering{
+        display: none;
+    }
+    .taskbar{
+        width: 75%;
+        height: 80%;
+    }
+    #filtertwo{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .forstyles{
+        width: 50%;
+        background: #fff;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, .06),
+                    -2px -2px 5px rgba(0, 0, 0, .04);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 4px 0px 4px;
+    }
+    .forstyles a{
+        text-decoration: none;
+        color: hsl(235, 19%, 35%);
+
+    }
+}
+.darkfiltertwo{
+    background: hsl(235, 21%, 11%);
+}
+.darkforstyles{
+    background: hsl(235, 21%, 11%);
+}
+.darkforstyles a{
+    color: #fff;
+}
+.opacitymanagerone{
+    animation: opacitymanagerone 0.3s;
+}
+@keyframes opacitymanagerone{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
