@@ -102,13 +102,8 @@ function doneNotes() {
 }
 // Making Notes:
 function showNote() {
-  if(JSON.parse(localStorage.getItem("doneNotes")).length == 0 && JSON.parse(localStorage.getItem("notes")).length == 0){
-    document.getElementById("tasks").innerHTML = "<h2 style='text-align:center;margin-top:10px'>ADD NOTES HERE</h2>"
-  }
-  else{
     unDoneNotes();
     doneNotes();
-  }
 }
 function addNote() {
   let addTxt = document.getElementById("note");
